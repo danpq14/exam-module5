@@ -1,0 +1,36 @@
+<div style="text-align: center">
+  <div style="display: inline-block">
+    <table>
+      <tr>
+        <th><p>Có {{books.length}} Cuốn Sách</p></th>
+        <th><button class="btn btn-primary" routerLink="book/add">Thêm Sách mới</button></th>
+      </tr>
+    </table>
+  </div>
+  <div style="text-align: center">
+    <div style="display: inline-block">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Tên Sách</th>
+          <th scope="col">Tác Giả</th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let book of books; let i = index">
+          <th scope="row">{{i+1}}</th>
+          <td><a [routerLink]="['book', book.id, 'detail']">{{book.title}}</a></td>
+          <td>{{book.author}}</td>
+          <td>
+            <button class="btn btn-primary" routerLink="book/{{book.id}}/edit">Edit</button>
+            <button class="btn btn-danger" routerLink="book/{{book.id}}/delete">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!--  <router-outlet></router-outlet>-->
+</div>

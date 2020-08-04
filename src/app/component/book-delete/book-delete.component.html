@@ -1,0 +1,25 @@
+<div style="text-align: center">
+  <div style="display: inline-block">
+    <table class="table table-bordered" style="width: 500px">
+      <tr>
+        <td scope="col">Mã Sách</td>
+        <td scope="col">{{book.id}}</td>
+      </tr>
+      <tr>
+        <td scope="col">Tên Sách</td>
+        <td scope="col">{{book.title}}</td>
+      </tr>
+      <tr>
+        <td scope="col">Tác Giả</td>
+        <td scope="col">{{book.author}}</td>
+      </tr>
+      <tr>
+        <td scope="col">Mô tả</td>
+        <td scope="col">{{book.description}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div style="text-align: center">
+  <button (click)="delete()" class="btn btn-primary">Xóa</button>
+</div>
